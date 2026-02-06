@@ -1,0 +1,22 @@
+<h2>URL Safety Checker</h2>
+
+<input id="u" placeholder="Enter URL">
+<button onclick="check()">Check</button>
+
+<p id="r"></p>
+
+<script>
+function check(){
+  let u = document.getElementById("u").value;
+
+  if(u.includes("@") || u.includes("http://")){
+    r.innerHTML="⚠ Suspicious URL";
+  }
+  else if(u.length < 5){
+    r.innerHTML="Enter valid URL";
+  }
+  else{
+    r.innerHTML="✅ Looks Safe";
+  }
+}
+</script>
